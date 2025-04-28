@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_pharmacyiconfinal"
+        android:label="Farmacia Delivery"
+        android:roundIcon="@mipmap/ic_pharmacyiconfinal"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DeliveryApp">
+        <activity
+            android:name="com.app.farmaciadelivery.ui.termos.PoliticsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.clientes.perfil.PerfilUsuarioActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.empresa.produto.EditProdutoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.app.farmaciadelivery.service.MyService"
+            android:foregroundServiceType="dataSync"
+            android:stopWithTask="true" />
+
+        <activity
+            android:name="com.app.farmaciadelivery.ui.clientes.pedidos.ConfirmarPedidoActivity"
+            android:label="Confirme Seus Dados"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.empresa.info.HelpEmpresaActivity"
+            android:label="Ajuda"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.clientes.info.HelpActivity"
+            android:label="Ajuda"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.clientes.pedidos.CarrinhoActivity"
+            android:label="Carrinho"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.controllers.home.HomeActivity"
+            android:label="Cardápio"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.clientes.home.HomeInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.empresa.produto.AddProdutoActivity"
+            android:label="Novo Produto"
+            android:parentActivityName="com.app.farmaciadelivery.ui.empresa.home.EmpresaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.empresa.pedidos.PedidosEmpresaActivity"
+            android:label="Pedidos"
+            android:parentActivityName="com.app.farmaciadelivery.ui.empresa.home.EmpresaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.clientes.pedidos.HistoricoPedidosActivity"
+            android:label="Meus Pedidos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.empresa.info.InfoEmpresaActivity"
+            android:label="Configurações"
+            android:parentActivityName="com.app.farmaciadelivery.ui.empresa.home.EmpresaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.empresa.home.EmpresaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.controllers.auth.CadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.controllers.auth.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.farmaciadelivery.ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:node="merge">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

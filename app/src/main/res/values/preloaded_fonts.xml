@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/aclonica</item>
+        <item>@font/aladin</item>
+        <item>@font/amaranth</item>
+        <item>@font/amiko</item>
+        <item>@font/anton</item>
+        <item>@font/bangers</item>
+        <item>@font/bungee</item>
+        <item>@font/capriola</item>
+        <item>@font/contrail_one</item>
+        <item>@font/covered_by_your_grace</item>
+        <item>@font/days_one</item>
+        <item>@font/passion_one</item>
+        <item>@font/play</item>
+        <item>@font/reem_kufi</item>
+        <item>@font/sail</item>
+        <item>@font/secular_one</item>
+        <item>@font/squada_one</item>
+        <item>@font/timmana</item>
+        <item>@font/unifrakturmaguntia</item>
+        <item>@font/volkhov</item>
+    </array>
+</resources>

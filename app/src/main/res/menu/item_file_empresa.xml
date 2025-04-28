@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/add_produtoE"
+            android:icon="@drawable/ic_adicionar_24dp"
+            android:title="Adicionar Produto" />
+
+        <item
+            android:id="@+id/pedidos_empresaE"
+            android:icon="@drawable/ic_baseline_assignment_24"
+            android:title="Pedidos" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Promoções">
+            <menu>
+                <item
+                    android:id="@+id/promocaoMenuE"
+                    android:icon="@drawable/baseline_star"
+                    android:title="Produtos em Promoção" />
+
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Categorias">
+            <menu>
+
+                <item
+                    android:id="@+id/menuCtgAllE"
+                    android:icon="@drawable/foursquaresicon"
+                    android:title="Todos os Produtos" />
+
+                <item
+                    android:id="@+id/menuCtgRemedioE"
+                    android:icon="@drawable/pharmacypillsicon"
+                    android:title="Remédios" />
+
+                <item
+                    android:id="@+id/menuCtgHigieneE"
+                    android:icon="@drawable/handsanitizericon"
+                    android:title="Produtos de Higiene" />
+
+                <item
+                    android:id="@+id/menuCtgBelezaE"
+                    android:icon="@drawable/shampooicon"
+                    android:title="Produtos de Beleza" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Configurações">
+        <menu>
+
+            <item
+                android:id="@+id/infoE"
+                android:icon="?attr/actionModePasteDrawable"
+                android:title="Informações" />
+
+            <item
+                android:id="@+id/helpE"
+                android:icon="@drawable/baseline_ajuda_24"
+                android:title="Ajuda" />
+
+            <item android:id="@+id/sairE"
+                android:title="Sair"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"/>
+
+        </menu>
+
+    </item>
+</menu>

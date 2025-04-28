@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/meuPerfil"
+        android:title="Meu Perfil"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Promoções">
+            <menu>
+                <item
+                    android:id="@+id/promocaoMenu"
+                    android:icon="@drawable/baseline_star"
+                    android:title="Produtos em Promoção" />
+
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Categorias">
+            <menu>
+
+                <item
+                    android:id="@+id/menuCtgAll"
+                    android:icon="@drawable/foursquaresicon"
+                    android:title="Todos os Produtos" />
+
+                <item
+                    android:id="@+id/menuCtgRemedio"
+                    android:icon="@drawable/pharmacypillsicon"
+                    android:title="Remédios" />
+
+                <item
+                    android:id="@+id/menuCtgHigiene"
+                    android:icon="@drawable/handsanitizericon"
+                    android:title="Produtos de Higiene" />
+
+                <item
+                    android:id="@+id/menuCtgBeleza"
+                    android:icon="@drawable/shampooicon"
+                    android:title="Produtos de Beleza" />
+            </menu>
+        </item>
+    </group>
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="Pedidos">
+            <menu>
+        <item
+            android:id="@+id/meu_carrinho"
+            android:icon="@drawable/baseline_shopping_cart_white_24"
+            android:title="Meu Carrinho" />
+
+        <item
+            android:id="@+id/pedidos_historico"
+            android:icon="@drawable/ic_baseline_assignment_24"
+            android:title="Meus Pedidos" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Informações">
+        <menu>
+
+            <item
+                android:id="@+id/info"
+                android:icon="@android:drawable/stat_sys_speakerphone"
+                android:title="Informações" />
+
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/baseline_ajuda_24"
+                android:title="Ajuda" />
+
+            <item
+                android:id="@+id/sair"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="Sair" />
+
+        </menu>
+
+    </item>
+</menu>

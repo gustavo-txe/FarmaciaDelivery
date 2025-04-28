@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="16dp"
+    app:cardCornerRadius="25dp">
+
+    <LinearLayout
+        android:id="@+id/mLinear_pedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/hora_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif"
+            android:text=" "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textPedidoNome"
+            android:layout_width="338dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="sans-serif"
+            android:text="Nome Do Cliente"
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            android:textStyle="normal|italic" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/textPedidoNumero"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="• Número"
+                android:textColor="@color/black_700"
+                android:textSize="17sp"
+                android:textStyle="normal|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPedidoPgto"
+                app:layout_goneMarginRight="10dp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="27dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="340dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textPedidoPgto"
+                app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="31dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="340dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="27dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="340dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textPedidoNumero"
+                app:srcCompat="@android:drawable/ic_menu_call" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="27dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="355dp"
+                android:layout_marginRight="355dp"
+                android:contentDescription="TODO"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textPedidoObs"
+                app:srcCompat="@android:drawable/ic_menu_add"
+                tools:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textPedidoPgto"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="• Método De Pagamento"
+                android:textColor="@color/black_700"
+                android:textSize="16sp"
+                android:textStyle="normal|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPedidoEndereco"
+                app:layout_goneMarginRight="10dp" />
+
+            <TextView
+                android:id="@+id/textPedidoEndereco"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="• Endereço"
+                android:textAllCaps="false"
+                android:textColor="@color/black_700"
+                android:textSize="16sp"
+                android:textStyle="normal|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginRight="10dp" />
+
+            <TextView
+                android:id="@+id/textPedidoObs"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:text="+ Observação"
+                android:textColor="#035306"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPedidoNumero"
+                app:layout_goneMarginRight="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/textPedidoItens"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="sans-serif"
+            android:text="1) Item (1 X R$ 16.50)"
+            android:textAllCaps="false"
+            android:textColor="#001E01"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textPedidoTotal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="sans-serif"
+            android:text="Valor Total"
+            android:textAllCaps="false"
+            android:textColor="#001E01"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center|center_horizontal"
+            android:text=" "
+            android:textColor="#6FDC51"
+            android:textSize="16dp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

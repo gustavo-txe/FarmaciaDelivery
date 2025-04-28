@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "938512814246",
+    "project_id": "farmaciaapp-ed30c",
+    "storage_bucket": "farmaciaapp-ed30c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938512814246:android:1eb97886054a07232c6467",
+        "android_client_info": {
+          "package_name": "com.app.farmaciadelivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4hAPx-vq4e1BH6TQpRjlhYwX2J7PVpC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

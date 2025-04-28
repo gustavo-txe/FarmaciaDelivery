@@ -1,7 +1,7 @@
 # 💊 Aplicativo Farmácia Delivery
 
-Aplicativo Android nativo destinado a estabelecimentos que buscam facilitar seu processo de venda e entrega de seus produtos.
-Através deste app o usuário é capaz de realizar seus pedidos de forma prática e intuitiva, proporcionando ao proprietário do estabelecimento uma melhor gestão de suas vendas e entregas.
+Aplicativo Android nativo destinado a estabelecimentos que buscam facilitar o processo de venda e entrega de seus produtos.
+Por meio deste app, o usuário pode realizar pedidos de forma prática e intuitiva, proporcionando ao proprietário uma gestão mais eficiente das vendas e entregas.
 
 ## 🚀 Funcionalidades
 

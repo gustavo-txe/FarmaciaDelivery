@@ -23,7 +23,7 @@ Por meio deste app, o usuário pode realizar pedidos de forma prática e intuiti
 
 ![Screenshot menu lateral](images/menulateral.png)
 
-✅ Notificações em tempo real, histórico de pedidos e confirmação de entrega.
+✅ Notificações em tempo real, histórico de pedidos e confirmação de entrega
 
 ![Screenshot pedidos notificacao](images/menupedidosnotificacao.png)
 

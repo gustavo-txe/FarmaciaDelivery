@@ -1,66 +1,34 @@
-# Diretórios de build
-/build
-**/build/
+# Arquivos/Diretórios de build
+/build/
+/app/build/
+*/build/
 
-# Arquivos locais de configuração do Android Studio
-.idea/
-*.iml
-
-# Diretórios de cache do Gradle
+# Arquivos do Android Studio
+/.idea/
+/*.iml
 .gradle/
-**/out/
-
-# Arquivos de cache do Kotlin
-.kotlin/
-
-# Arquivos de log
-*.log
-
-# Arquivos locais de execução
 local.properties
 
-# Arquivos de chaves e senhas (importante)
-*.keystore
-*.jks
+# Cache e logs
+*.log
+*.tmp
+*.bak
+*.swp
 
-# Arquivos de banco de dados temporários
-*.db
-*.db-journal
-
-# Arquivos de ambiente e variáveis locais
-.env
-
-# Diretório de dependências do Gradle Wrapper
-/gradle/wrapper/gradle-wrapper.properties
-
-# Arquivos de crashlytics / firebase
-crashlytics.properties
-fabric.properties
-
-# Arquivos gerados pelo sistema
+# Arquivos de sistema
 .DS_Store
 Thumbs.db
 
-# Arquivos de cache do Android Studio
-.cxx/
-.externalNativeBuild/
-.idea/caches
-.idea/libraries
-.idea/modules.xml
-.idea/workspace.xml
-.idea/navEditor.xml
-.idea/assetWizardSettings.xml
+# Configurações de Firebase
+google-services.json
+firebase-debug.log
 
-# Arquivos de depuração do NDK
-obj/
+# Outros arquivos temporários
+/captures/
+/outputs/
 
-# Arquivos de auto-save do Android Studio
-.idea/gradle.xml
-.idea/misc.xml
-.idea/compiler.xml
+# IntelliJ
+/out/
 
-# Configurações de execução do Android Studio
-.idea/runConfigurations/
-
-# Configuração do local do emulador Android
-.emulator_console_auth_token
+# Arquivos de testes gerados
+/test-output/

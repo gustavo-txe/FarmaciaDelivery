@@ -42,6 +42,9 @@ Por meio deste app, o usuário pode realizar pedidos de forma prática e intuiti
 - **Arquitetura MVC(Model-View-Controller)** — Melhor separação de responsabilidades.
 - **XML** — Para a construção da UI.
 
+- **Versão do Android Studio** — 2024.3.1 Patch 2
+- **Versão do Gradle** — 8.11.1
+
 ## 📫 Contato
 
 - Email: gustavoteixeira.ggt@gmail.com

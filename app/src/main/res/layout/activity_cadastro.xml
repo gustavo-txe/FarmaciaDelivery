@@ -148,6 +148,12 @@
             android:textSize="14dp"
             android:textStyle="italic" />
 
+        <CheckBox
+            android:id="@+id/checkBoxPoliticas"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Li e concordo com os Termos de Uso e a Política de Privacidade." />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -157,7 +163,7 @@
             android:layout_height="25dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonCadastrar"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:background="@drawable/button_color"

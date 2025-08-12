@@ -4,13 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -20,12 +26,12 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.app.farmaciadelivery.controllers.EmpresaController;
+import com.app.farmaciadelivery.service.MyService;
 import com.app.farmaciadelivery.ui.empresa.pedidos.PedidosEmpresaActivity;
 import com.app.farmaciadelivery.ui.adapters.AdapterProduto;
 import com.app.farmaciadelivery.ui.empresa.info.InfoEmpresaActivity;
 import com.app.farmaciadelivery.models.Produto;
 import com.app.farmaciadelivery.R;
-import com.app.farmaciadelivery.service.MyService;
 import com.app.farmaciadelivery.ui.empresa.info.HelpEmpresaActivity;
 import com.app.farmaciadelivery.ui.empresa.produto.AddProdutoActivity;
 import com.app.farmaciadelivery.ui.empresa.produto.EditProdutoActivity;
@@ -35,6 +41,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,6 +73,14 @@ public class EmpresaActivity extends AppCompatActivity {
             startForegroundService(intent);
         } else {
             stopService(intent);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission
+                        .POST_NOTIFICATIONS}, 1);
+            }
         }
 
         searchViewEmpresa.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -129,6 +144,10 @@ public class EmpresaActivity extends AppCompatActivity {
                         abrirActivity(HelpEmpresaActivity.class);
                         break;
 
+                    case R.id.politicasE:
+                        abrirPoliticas();
+                        break;
+
                     case R.id.sairE:
                         deslogarUsuario();
                         break;
@@ -144,7 +163,7 @@ public class EmpresaActivity extends AppCompatActivity {
     }
 
     //Editar e Deletar items através do onItemClick e onLongItemClick respectivamente
-    void clickItemEditDelete(){
+    void clickItemEditDelete() {
         recyclerProdutos.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerProdutos,
                 new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
@@ -372,6 +391,15 @@ public class EmpresaActivity extends AppCompatActivity {
 
         startActivity(new Intent(EmpresaActivity.this, context));
 
+    }
+
+    public void abrirPoliticas() {
+
+        String url = "https://docs.google.com/document/d/e/2PACX-1vQx3NkpqWDORfoiOC-" +
+                "Vu6ZH3MxA3FhFIxlqqCaiujTPNRl2tZRE84YCxLyDckyT0UpAs87kPkRPvkN3/pub";
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 
     private void inicializarComponentes() {

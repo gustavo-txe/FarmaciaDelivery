@@ -219,6 +219,13 @@
 
         </LinearLayout>
 
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+
         <TextView
             android:id="@+id/textView26"
             android:layout_width="match_parent"
@@ -230,9 +237,6 @@
             android:textSize="16dp"
             android:textStyle="bold" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
 
         <EditText
             android:id="@+id/editProdutoPreco"
@@ -253,16 +257,12 @@
             android:paddingLeft="15dp"
             android:paddingTop="5dp"
             android:paddingRight="15dp"
-            android:paddingBottom="5dp"
             android:textAllCaps="false"
             android:textColor="#0E0D0D"
             android:textColorHint="#605F5F"
             android:textSize="15dp"
             android:textStyle="italic" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
 
         <Button
             android:id="@+id/button"
@@ -282,6 +282,20 @@
             android:textStyle="bold"
             app:backgroundTint="#4B884E"
             app:backgroundTintMode="add" />
+
+        <TextView
+            android:id="@+id/textView206"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="É proibido cadastrar produtos controlados, medicamentos sujeitos à prescrição médica, substâncias ilegais ou quaisquer itens que infrinjam normas da ANVISA ou outras legislações sanitárias."
+            android:textColor="#FF9800"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

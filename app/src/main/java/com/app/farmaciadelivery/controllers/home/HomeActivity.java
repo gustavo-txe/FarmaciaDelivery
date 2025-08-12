@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cardapio);
+        setContentView(R.layout.activity_catalogo);
         getSupportActionBar().hide();
 
         InicializarComponentes();
@@ -159,6 +159,10 @@ public class HomeActivity extends AppCompatActivity {
 
                 case R.id.help:
                     abrirActivity(HelpActivity.class);
+                    break;
+
+                case R.id.politicas:
+                    abrirPoliticas();
                     break;
 
                 case R.id.sair:
@@ -456,6 +460,15 @@ public class HomeActivity extends AppCompatActivity {
     public void abrirWhatsaap() {
         Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=5531995598975&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20meu%20pedido!");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void abrirPoliticas() {
+
+        String url = "https://docs.google.com/document/d/e/2PACX-1vQx3NkpqWDORfoiOC-" +
+                "Vu6ZH3MxA3FhFIxlqqCaiujTPNRl2tZRE84YCxLyDckyT0UpAs87kPkRPvkN3/pub";
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
 

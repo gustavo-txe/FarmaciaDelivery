@@ -79,6 +79,11 @@
                 android:title="Ajuda" />
 
             <item
+                android:id="@+id/politicas"
+                android:icon="@drawable/baseline_info_24"
+                android:title="Políticas de Privacidade" />
+
+            <item
                 android:id="@+id/sair"
                 android:icon="@drawable/ic_baseline_exit_to_app_24"
                 android:title="Sair" />

@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.Manifest;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -25,16 +27,18 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.app.farmaciadelivery.controllers.PedidosEmpresaController;
+import com.app.farmaciadelivery.service.MyService;
 import com.app.farmaciadelivery.ui.adapters.AdapterPedidosEmpresa;
 import com.app.farmaciadelivery.models.Pedido;
 import com.app.farmaciadelivery.R;
-import com.app.farmaciadelivery.service.MyService;
 import com.app.farmaciadelivery.ui.listener.RecyclerItemClickListener;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,11 +62,18 @@ public class PedidosEmpresaActivity extends AppCompatActivity {
         confirmarPedidos();
 
         Intent intent = new Intent(this, MyService.class);
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(intent);
         } else {
-            stopService(intent);
+            startService(intent);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission
+                        .POST_NOTIFICATIONS}, 1);
+            }
         }
 
         if (pedidos.size() == 0) {

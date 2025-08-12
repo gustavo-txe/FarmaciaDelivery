@@ -21,9 +21,6 @@ public class MyService extends Service {
 
         Intent pedidoIntent = new Intent(this, PedidosEmpresaActivity.class);
 
-        pedidoIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        getApplicationContext().startActivity(pedidoIntent);
-
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
                 pedidoIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 

@@ -12,7 +12,10 @@ public class ConfigFirebase {
     public static String getIdUsuario() {
 
         FirebaseAuth autenticacao = getFirebaseAutenticacao();
-        return autenticacao.getCurrentUser().getUid();
+        if (autenticacao.getCurrentUser() != null) {
+            return autenticacao.getCurrentUser().getUid();
+        }
+        return null;
 
     }
 

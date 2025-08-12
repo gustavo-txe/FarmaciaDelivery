@@ -3,8 +3,11 @@ package com.app.farmaciadelivery.controllers.auth;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -28,6 +31,8 @@ public class CadastroActivity extends AppCompatActivity {
     private Switch switchTipoUsuario;
     private FirebaseAuth autenticacao;
     private TextView textViewPolitics;
+    private CheckBox checkPoliticas;
+    private Button cadastrarButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +46,22 @@ public class CadastroActivity extends AppCompatActivity {
             abrirPoliticas();
         });
 
+        cadastrarButton.setOnClickListener(v -> {
+            validarCadastroUsuario();
+        });
+
     }
 
     public void abrirPoliticas() {
-        Intent intent = new Intent(CadastroActivity.this, PoliticsActivity.class);
+
+        String url = "https://docs.google.com/document/d/e/2PACX-1vQx3NkpqWDORfoiOC-" +
+                "Vu6ZH3MxA3FhFIxlqqCaiujTPNRl2tZRE84YCxLyDckyT0UpAs87kPkRPvkN3/pub";
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
 
-    public void validarCadastroUsuario(View view) {
+    public void validarCadastroUsuario() {
 
         String textoNome = campoNome.getText().toString();
         String textoEmail = campoEmail.getText().toString();
@@ -67,22 +80,32 @@ public class CadastroActivity extends AppCompatActivity {
 
         if (!textoSenha.isEmpty()) {
 
-            if (textoSenha.equals(textoSenhaConfirm)) {
+            if (!textoSenha.equals(textoSenhaConfirm)) {
 
-                Usuario usuario = new Usuario();
-                usuario.setNome(textoNome);
-                usuario.setTipo(veriricaTipoUsuario());
-
-                cadastrarUsuario(usuario);
-
-            } else {
                 Toast.makeText(CadastroActivity.this, "Confirme sua senha corretamente!",
                         Toast.LENGTH_SHORT).show();
+
 
             }
 
         } else {
             Toast.makeText(CadastroActivity.this, "Preencha o campo *Senha!",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        if(checkPoliticas.isChecked() &&
+                !textoSenha.isEmpty() &&
+                !textoSenhaConfirm.isEmpty() &&
+                !textoEmail.isEmpty() && !textoNome.isEmpty()){
+
+            Usuario usuario = new Usuario();
+            usuario.setNome(textoNome);
+            usuario.setTipo(veriricaTipoUsuario());
+
+            cadastrarUsuario(usuario);
+
+        }else{
+            Toast.makeText(CadastroActivity.this, "Aceite os Termos e preencha todos os campos!",
                     Toast.LENGTH_SHORT).show();
         }
 
@@ -159,6 +182,9 @@ public class CadastroActivity extends AppCompatActivity {
         switchTipoUsuario = findViewById(R.id.tipoUsuario);
         campoSenhaConfirm = findViewById(R.id.campoSenhaConfirmacao);
         textViewPolitics = findViewById(R.id.textViewPoliticas);
+        checkPoliticas = findViewById(R.id.checkBoxPoliticas);
+        cadastrarButton = findViewById(R.id.buttonCadastrar);
+
     }
 
 }

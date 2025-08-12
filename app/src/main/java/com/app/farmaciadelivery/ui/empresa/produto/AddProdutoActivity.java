@@ -132,7 +132,7 @@ public class AddProdutoActivity extends AppCompatActivity {
 
                 addProdutoController.setUrl(produto, uriImg.toString());
                 addProdutoController.salvarProduto(produto);
-                Toast.makeText(AddProdutoActivity.this, "Upload realizado com Sucesso", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddProdutoActivity.this, "Item adicionado com Sucesso!", Toast.LENGTH_LONG).show();
 
             } else {
 
@@ -169,7 +169,7 @@ public class AddProdutoActivity extends AppCompatActivity {
         }
         if (nome != null && descricao != null) {
             uploadImagemFirebase(imageUri);
-            exibirMensagem("Produto Salvo com Sucesso!");
+            Toast.makeText(this, "Adicionando Produto...", Toast.LENGTH_LONG).show();
             finish();
         } else {
             exibirMensagem("Preencha todas as informações!");

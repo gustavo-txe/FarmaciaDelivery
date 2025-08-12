@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="false"
@@ -27,9 +28,10 @@
             android:screenOrientation="portrait" />
 
         <service
-            android:name="com.app.farmaciadelivery.service.MyService"
+            android:name=".service.MyService"
             android:foregroundServiceType="dataSync"
-            android:stopWithTask="true" />
+            android:stopWithTask="true">
+        </service>
 
         <activity
             android:name="com.app.farmaciadelivery.ui.clientes.pedidos.ConfirmarPedidoActivity"

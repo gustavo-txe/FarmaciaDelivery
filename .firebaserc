@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "aplicativo-delivery-d1d93"
-  }
+    "default": "aplicativo-delivery-d1d93",
+    "farmacia": "farmaciaapp-ed30c"
+  },
+  "targets": {},
+  "etags": {}
 }
